@@ -1,4 +1,5 @@
 /node_modules/
 /dist/
 /.vscode/
+/.routify/
 .DS_Store
