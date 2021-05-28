@@ -4,8 +4,8 @@
     export let height: number = 40;
     export let typed_key: string = "";
     export let display_key: string = "";
-    export let upper_case_key: string = "";
-    export let lower_case_key: string = "";
+    export let upper_case_key: string = null;
+    export let lower_case_key: string = null;
 
     $: is_typed = is_typed_key(typed_key);
 
