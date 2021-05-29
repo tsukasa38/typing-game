@@ -1,5 +1,6 @@
 <script lang="ts">
     let is_typed: boolean;
+    export let flex: number = 1.0;
     export let width: number = 40;
     export let height: number = 40;
     export let typed_key: string = "";
@@ -14,7 +15,7 @@
     }
 </script>
 
-<button class="key" class:is_typed style={`width: ${width}px; height: ${height}px; line-height: ${height}px;`}>{display_key}</button>
+<button class="key" class:is_typed style={`width: ${width}px; height: ${height}px; line-height: ${height}px; flex: ${flex}`}>{display_key}</button>
 
 <style>
     .key {
