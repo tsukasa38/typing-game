@@ -3,6 +3,7 @@
     export let typed_key: string = "";
 
     function handleKeydown(event: KeyboardEvent): void {
+        typed_key = "";
         typed_key = event.key;
     }
 </script>
