@@ -75,7 +75,7 @@
 
 <style>
     .keyboard {
-        margin: auto;
+        margin: 0 auto;
         max-width: 960px;
     }
     .segmant {

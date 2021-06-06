@@ -1,10 +1,12 @@
 <script lang="ts" context="module">
 
-    type Word = {
+    export type Word = {
         name: string;
         romaji: string;
         hiragana: string;
     };
+
+    export type Status = "prepare" | "run" | "finish";
 
     function generateRandomInt(max: number): number {
         return Math.floor(Math.random() * max);

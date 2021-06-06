@@ -1,34 +1,27 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import type { Word, Status } from "../lib/game.svelte";
     import { generateWords, checkKey } from "../lib/game.svelte";
     import KeyBoard from "../components/KeyBoard.svelte";
-
-    type Word = {
-        name: string;
-        romaji: string;
-        hiragana: string;
-    };
-
-    type Status = "preparation" | "running" | "finish";
 
     let WORDS: Word[] = null;
     let assign_words: Word[] = null;
 
     let typed_key: string = "";
     let typed_word: string = "";
-    
+
     let typed_word_index: number = 0;
     let typed_word_count: number = 0;
     let assign_word_count: number = 10;
-    let status: Status = "preparation";
+    let status: Status = "prepare";
 
-    $: if(status === "running") {
+    $: if(status === "run") {
         const target_word: Word = assign_words[typed_word_count];
         const target_char: string = target_word.romaji[typed_word_index];
 
         if(checkKey(typed_key)) {
             typed_word = target_word.romaji.slice(0, typed_word_index) + typed_key;
-            
+
             if(typed_key === target_char){
                 typed_word_index += 1;
 
@@ -46,29 +39,25 @@
             }
         }
     }
-    
+
     onMount(async ()=>{
-        WORDS = await (await fetch("PrefectureCapital.json")).json();
+        WORDS = await (await fetch("/data/PrefectureCapital.json/")).json();
         assign_words = generateWords(WORDS, assign_word_count);
     });
 
 </script>
 
 <main>
-    {#if status === "preparation"}
-    <h1>Preparation</h1>
-    <button on:click={() => { status = "running"; }}>start</button>
+    {#if status === "prepare"}
+    <button on:click={() => { status = "run"; }}>start</button>
 
-    {:else if status === "running"}
-    <h1>Typing Game</h1>
-    <h1>{assign_words[typed_word_count].name}</h1>
-    <h1>{assign_words[typed_word_count].hiragana}</h1>
-    <h1>{assign_words[typed_word_count].romaji}</h1>
-    <h1>{typed_word}</h1>
-    
+    {:else if status === "run"}
+    <h1>{assign_words[typed_word_count].name}({assign_words[typed_word_count].hiragana})</h1>
+    <h1>{assign_words[typed_word_count].romaji}:{typed_word}</h1>
+
     {:else if status === "finish"}
-    <h1>Clear</h1>
-    <button on:click={() => { status = "preparation"; }}>retry</button>
+    <button on:click={() => { status = "prepare"; }}>ReTRY Same Words</button>
+    <button on:click={() => { status = "prepare"; assign_words = generateWords(WORDS, assign_word_count); }}>ReTRY Random Words</button>
     {/if}
 
     <KeyBoard bind:typed_key={typed_key} />
@@ -76,8 +65,11 @@
 
 <style>
     main {
-        text-align: center;
-        padding: 1em;
-        margin: 0 auto;
+        width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
     }
 </style>

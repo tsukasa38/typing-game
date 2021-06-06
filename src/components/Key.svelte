@@ -1,8 +1,8 @@
 <script lang="ts">
     let is_typed: boolean;
     export let flex: number = 1.0;
-    export let width: number = 40;
-    export let height: number = 40;
+    export let width: number = 50;
+    export let height: number = 50;
     export let typed_key: string = "";
     export let display_key: string = "";
     export let upper_case_key: string = null;
@@ -13,15 +13,22 @@
     function is_typed_key(typed_key: string): boolean {
         return (lower_case_key === typed_key || upper_case_key === typed_key);
     }
+
+    function handleClick(): void {
+        typed_key = "";
+        typed_key = display_key;
+    }
 </script>
 
-<button class="key" class:is_typed style={`width: ${width}px; height: ${height}px; line-height: ${height}px; flex: ${flex}`}>{display_key}</button>
+<button class="key" class:is_typed on:click={handleClick} style={`width: ${width}px; height: ${height}px; line-height: ${height}px; flex: ${flex}`}>{display_key}</button>
 
 <style>
     .key {
-        outline: none;
+        padding: 0;
         margin: 1.5px;
+        outline: none;
         font-size: 1em;
+        overflow: hidden;
         font-weight: bold;
         text-align: center;
         border-radius: 4px;
