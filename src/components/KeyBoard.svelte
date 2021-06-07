@@ -75,13 +75,21 @@
 
 <style>
     .keyboard {
+        padding: 1rem;
         margin: 0 auto;
-        max-width: 960px;
+        border-radius: 1.5rem;
+        background-color: #ffffff;
+        box-sizing: border-box;
     }
     .segmant {
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: center;
+    }
+    @media (max-width: 720px) {
+        .keyboard {
+            width: 100vw;
+        }
     }
 </style>
