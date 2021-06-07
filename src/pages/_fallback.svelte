@@ -1,37 +1,62 @@
 <script lang="ts">
-    import logo from "../assets/svelte.png";
 </script>
 
 <main>
-    <img src={logo} alt="Svelte Logo" />
-    <h1>404 Not Found</h1>
+    <div class="container">
+		<h1 class="title">404 Not Found</h1>
+		<a class="home" href="/">Home</a>
+	</div>
 </main>
 
 <style>
     main {
-        text-align: center;
-        padding: 1em;
-        margin: 0 auto;
-    }
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+    .container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: #ffffff;
+		border-radius: 50%;
+		padding: 2.5rem;
+	}
+    .title {
+		font-size: 4rem;
+		line-height: 1.2;
+		color: #ff3e00;
+		font-weight: bold;
+		margin: 2rem auto;
+	}
+    .home {
+		font-size: 2rem;
+		color: #ff9e00;
+		font-weight: bold;
+	}
 
-    img {
-        height: 16rem;
-        width: 16rem;
-    }
-
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 100;
-        line-height: 1.1;
-        margin: 2rem auto;
-        max-width: 14rem;
-    }
-
-    @media (min-width: 480px) {
-        h1 {
-            max-width: none;
-        }
-    }
+    @media (max-width: 620px) {
+		.container {
+			padding: 2rem;
+		}
+		.title {
+			font-size: 2.5rem;
+		}
+		.home {
+			font-size: 1.5rem;
+		}
+	}
+	@media (max-width: 420px) {
+		.container {
+			padding: 1.5rem;
+		}
+		.title {
+			font-size: 2rem;
+		}
+		.home {
+			font-size: 1.2rem;
+		}
+	}
 </style>
