@@ -40,24 +40,45 @@
         }
     }
 
-    onMount(async ()=>{
-        WORDS = await (await fetch("/data/PrefectureCapital.json/")).json();
+    onMount(async () => {
+        WORDS = await (await fetch("/data/Prefecture.json/")).json();
         assign_words = generateWords(WORDS, assign_word_count);
     });
+
+    function start(): void {
+        status = "run";
+    }
+
+    function retry(): void {
+        status = "prepare";
+        assign_words = generateWords(WORDS, assign_word_count);
+    }
 
 </script>
 
 <main>
     {#if status === "prepare"}
-    <button on:click={() => { status = "run"; }}>start</button>
+    <div class="prepareContainer">
+        <button class="startButton" on:click={start}>スタート</button>
+    </div>
 
     {:else if status === "run"}
-    <h1>{assign_words[typed_word_count].name}({assign_words[typed_word_count].hiragana})</h1>
-    <h1>{assign_words[typed_word_count].romaji}:{typed_word}</h1>
+    <div class="runContainer">
+        <p class="name">
+            {assign_words[typed_word_count].name}
+        </p>
+        <p class="romaji">
+            <span>
+                {assign_words[typed_word_count].romaji.slice(0, typed_word_index)}
+            </span>
+                {assign_words[typed_word_count].romaji.slice(typed_word_index)}
+        </p>
+    </div>
 
     {:else if status === "finish"}
-    <button on:click={() => { status = "prepare"; }}>ReTRY Same Words</button>
-    <button on:click={() => { status = "prepare"; assign_words = generateWords(WORDS, assign_word_count); }}>ReTRY Random Words</button>
+    <div class="finishContainer">
+        <button class="retryButton" on:click={retry}>リトライ</button>
+    </div>
     {/if}
 
     <KeyBoard bind:typed_key={typed_key} />
@@ -70,6 +91,99 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-evenly;
     }
+    span {
+        color: darkorange;
+    }
+    .prepareContainer {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 50%;
+        padding: 2rem 4rem;
+    }
+    .runContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 50%;
+        padding: 3.5rem 7rem;
+        transition: all 1s;
+    }
+    .finishContainer {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 50%;
+        padding: 2rem 4rem;
+    }
+    .startButton {
+        border: none;
+        outline: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: .25rem;
+        background-color: #057fff;
+        box-shadow: 0px 2px 2px 2px #dcdcdc;
+    }
+    .retryButton {
+        border: none;
+        outline: none;
+        padding: 1rem;
+        cursor: pointer;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: .25rem;
+        background-color: #057fff;
+        box-shadow: 0px 2px 2px 2px #dcdcdc;
+    }
+    .name {
+        margin: 0;
+        padding: .25rem;
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+    .romaji {
+        margin: 0;
+        padding: .25rem;
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+	@media (max-height: 640px) {
+		.runContainer {
+            padding: 3rem 6rem;
+        }
+        .name {
+            font-size: 3rem;
+        }
+        .romaji {
+            font-size: 3rem;
+        }
+	}
+    @media (max-height: 520px) {
+		.runContainer {
+            padding: 2rem 4rem;
+        }
+        .name {
+            font-size: 2.5rem;
+        }
+        .romaji {
+            font-size: 2.5rem;
+        }
+	}
+    @media (max-height: 440px) {
+		.runContainer {
+            padding: 1rem 4rem;
+        }
+        .name {
+            font-size: 2rem;
+        }
+        .romaji {
+            font-size: 2rem;
+        }
+	}
 </style>
