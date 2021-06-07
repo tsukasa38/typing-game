@@ -1,190 +1,190 @@
 [
     {
-        "name": "札幌市",
+        "name": "札幌",
         "romaji": "Sapporo",
         "hiragana": "さっぽろ"
     },{
-        "name": "青森市",
+        "name": "青森",
         "romaji": "Aomori",
         "hiragana": "あおもり"
     },{
-        "name": "盛岡市",
+        "name": "盛岡",
         "romaji": "Morioka",
         "hiragana": "もりおか"
     }, {
-        "name": "仙台市",
+        "name": "仙台",
         "romaji": "Sendai",
         "hiragana": "せんだい"
     },{
-        "name": "秋田市",
+        "name": "秋田",
         "romaji": "Akita",
         "hiragana": "あきた"
     },{
-        "name": "山形市",
+        "name": "山形",
         "romaji": "Yamagata",
         "hiragana": "やまがた"
     },{
-        "name": "福島市",
+        "name": "福島",
         "romaji": "Fukushima",
         "hiragana": "ふくしま"
     },{
-        "name": "水戸市",
+        "name": "水戸",
         "romaji": "Mito",
         "hiragana": "みと"
     },{
-        "name": "宇都宮市",
+        "name": "宇都宮",
         "romaji": "Utsunomiya",
         "hiragana": "うつのみや"
     },{
-        "name": "前橋市",
+        "name": "前橋",
         "romaji": "Maebashi",
         "hiragana": "まえばし"
     },{
-        "name": "さいたま市",
+        "name": "さいたま",
         "romaji": "Saitama",
         "hiragana": "さいたま"
     },{
-        "name": "千葉市",
+        "name": "千葉",
         "romaji": "Chiba",
         "hiragana": "ちば"
     },{
-        "name": "新宿区",
+        "name": "新宿",
         "romaji": "Shinjuku",
         "hiragana": "しんじゅく"
     },{
-        "name": "横浜市",
+        "name": "横浜",
         "romaji": "Yokohama",
         "hiragana": "よこはま"
     },{
-        "name": "新潟市",
+        "name": "新潟",
         "romaji": "Niigata",
         "hiragana": "にいがた"
     },{
-        "name": "富山市",
+        "name": "富山",
         "romaji": "Toyama",
         "hiragana": "とやま"
     },{
-        "name": "金沢市",
+        "name": "金沢",
         "romaji": "Kanazawa",
         "hiragana": "かなざわ"
     },{
-        "name": "福井市",
+        "name": "福井",
         "romaji": "Fukui",
         "hiragana": "ふくい"
     },{
-        "name": "甲府市",
+        "name": "甲府",
         "romaji": "Kofu",
         "hiragana": "こうふ"
     },{
-        "name": "長野市",
+        "name": "長野",
         "romaji": "Nagano",
         "hiragana": "ながの"
     },{
-        "name": "岐阜市",
+        "name": "岐阜",
         "romaji": "Gifu",
         "hiragana": "ぎふ"
     },{
-        "name": "静岡市",
+        "name": "静岡",
         "romaji": "Shizuoka",
         "hiragana": "しずおか"
     },{
-        "name": "名古屋市",
+        "name": "名古屋",
         "romaji": "Nagoya",
         "hiragana": "なごや"
     },{
-        "name": "津市",
+        "name": "津",
         "romaji": "Tsu",
         "hiragana": "つ"
     },{
-        "name": "大津市",
+        "name": "大津",
         "romaji": "Otsu",
         "hiragana": "おおつ"
     },{
-        "name": "京都市",
+        "name": "京都",
         "romaji": "Kyoto",
         "hiragana": "きょうと"
     },{
-        "name": "大阪市",
+        "name": "大阪",
         "romaji": "Osaka",
         "hiragana": "おおさか"
     },{
-        "name": "神戸市",
+        "name": "神戸",
         "romaji": "Kobe",
         "hiragana": "こうべ"
     },{
-        "name": "奈良市",
+        "name": "奈良",
         "romaji": "Nara",
         "hiragana": "なら"
     },{
-        "name": "和歌山市",
+        "name": "和歌山",
         "romaji": "Wakayama",
         "hiragana": "わかやま"
     },{
-        "name": "鳥取市",
+        "name": "鳥取",
         "romaji": "Tottori",
         "hiragana": "とっとり"
     },{
-        "name": "松江市",
+        "name": "松江",
         "romaji": "Matsue",
         "hiragana": "まつえ"
     },{
-        "name": "岡山市",
+        "name": "岡山",
         "romaji": "Okayama",
         "hiragana": "おかやま"
     },{
-        "name": "広島市",
+        "name": "広島",
         "romaji": "Hiroshima",
         "hiragana": "ひろしま"
     },{
-        "name": "山口市",
+        "name": "山口",
         "romaji": "Yamaguchi",
         "hiragana": "やまぐち"
     },{
-        "name": "徳島市",
+        "name": "徳島",
         "romaji": "Tokushima",
         "hiragana": "とくしま"
     },{
-        "name": "高松市",
+        "name": "高松",
         "romaji": "Takamatsu",
         "hiragana": "たかまつ"
     },{
-        "name": "松山市",
+        "name": "松山",
         "romaji": "Matsuyama",
         "hiragana": "まつやま"
     },{
-        "name": "高知市",
+        "name": "高知",
         "romaji": "Kochi",
         "hiragana": "こうち"
     },{
-        "name": "福岡市",
+        "name": "福岡",
         "romaji": "Fukuoka",
         "hiragana": "ふくおか"
     },{
-        "name": "佐賀市",
+        "name": "佐賀",
         "romaji": "Saga",
         "hiragana": "さが"
     },{
-        "name": "長崎市",
+        "name": "長崎",
         "romaji": "Nagasaki",
         "hiragana": "ながさき"
     },{
-        "name": "熊本市",
+        "name": "熊本",
         "romaji": "Kumamoto",
         "hiragana": "くまもと"
     },{
-        "name": "大分市",
+        "name": "大分",
         "romaji": "Oita",
         "hiragana": "おおいた"
     },{
-        "name": "宮崎市",
+        "name": "宮崎",
         "romaji": "Miyazaki",
         "hiragana": "みやざき"
     },{
-        "name": "鹿児島市",
+        "name": "鹿児島",
         "romaji": "Kagoshima",
         "hiragana": "かごしま"
     },{
-        "name": "那覇市",
+        "name": "那覇",
         "romaji": "Naha",
         "hiragana": "なは"
     }
