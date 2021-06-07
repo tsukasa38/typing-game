@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "typing-game",
+  "version": "1.0.0",
   "scripts": {
     "dev:vite": "vite",
     "dev:routify": "routify",
