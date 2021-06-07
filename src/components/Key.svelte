@@ -34,6 +34,7 @@
         text-align: center;
         border-radius: 4px;
         border: 2px solid #8d8d8d;
+        box-shadow: 0px 2px 2px 2px #dcdcdc;
     }
     .is_typed {
         color: #ffffff;
