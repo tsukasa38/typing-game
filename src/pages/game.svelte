@@ -68,10 +68,7 @@
             {assign_words[typed_word_count].name}
         </p>
         <p class="romaji">
-            <span>
-                {assign_words[typed_word_count].romaji.slice(0, typed_word_index)}
-            </span>
-                {assign_words[typed_word_count].romaji.slice(typed_word_index)}
+            <span class="correctString">{assign_words[typed_word_count].romaji.slice(0, typed_word_index)}</span>{assign_words[typed_word_count].romaji.slice(typed_word_index)}
         </p>
     </div>
 
@@ -92,9 +89,6 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: space-evenly;
-    }
-    span {
-        color: darkorange;
     }
     .prepareContainer {
         display: flex;
@@ -152,6 +146,9 @@
         padding: .25rem;
         font-size: 3.5rem;
         font-weight: bold;
+    }
+    .correctString {
+        color: darkorange;
     }
 	@media (max-height: 640px) {
 		.runContainer {
