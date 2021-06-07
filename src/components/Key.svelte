@@ -28,6 +28,7 @@
         margin: 1.5px;
         outline: none;
         font-size: 1em;
+        cursor: pointer;
         overflow: hidden;
         font-weight: bold;
         text-align: center;
