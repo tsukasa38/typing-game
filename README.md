@@ -1,10 +1,11 @@
 # タイピングゲーム
 
-**Version 1.0.0 リリース**
+**Version 1.1.0 リリース**
 
 ## 実装済機能
 
 - キーボードタイピング
+- PWA(Progressive Web Apps)
 
 ## 未実装機能
 
