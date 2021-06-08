@@ -1,8 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import type { Word, Status } from "../lib/game.svelte";
-    import { generateWords, checkKey } from "../lib/game.svelte";
-    import KeyBoard from "../components/KeyBoard.svelte";
+    import type { Word, Status } from "../../lib/game.svelte";
+    import { generateWords, checkKey } from "../../lib/game.svelte";
+    import KeyBoard from "../../components/KeyBoard.svelte";
+
+    export let genre: string;
 
     let WORDS: Word[] = null;
     let assign_words: Word[] = null;
@@ -41,7 +43,7 @@
     }
 
     onMount(async () => {
-        WORDS = await (await fetch("/data/Prefecture.json/")).json();
+        WORDS = await (await fetch(`/data/${genre}.json/`)).json();
         assign_words = generateWords(WORDS, assign_word_count);
     });
 
