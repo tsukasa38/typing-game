@@ -81,7 +81,7 @@
 
 <style>
     .keyboard {
-        padding: 1rem;
+        padding: .8rem;
         margin: 0 auto;
         border-radius: 1.5rem;
         background-color: #ffffff;
@@ -93,7 +93,12 @@
         flex-direction: row;
         justify-content: center;
     }
-    @media (max-width: 720px) {
+    @media (orientation: landscape) and (max-height: 480px) {
+        .keyboard {
+            width: 100vw;
+        }
+    }
+    @media (orientation: portrait) and (max-width: 720px) {
         .keyboard {
             width: 100vw;
         }
