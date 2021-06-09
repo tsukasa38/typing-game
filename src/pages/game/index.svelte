@@ -1,14 +1,12 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import LinkBox from "../../components/LinkBox.svelte";
+</script>
 
 <main>
-	<h1>メニュー</h1>
+	<h1 class="title">ジャンル</h1>
 	<div class="container">
-        <div class="linkContainer">
-            <a href="/game/prefecture">都道府県名</a>
-        </div>
-		<div class="linkContainer">
-            <a href="/game/prefecture-capital">都道府県庁所在地名</a>
-        </div>
+		<LinkBox url="/game/prefecture" title="都道府県" />
+		<LinkBox url="/game/prefecture-capital" title="都道府県庁所在地" />
 	</div>
 </main>
 
@@ -20,16 +18,19 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		overflow-y: auto;
 	}
 	.container {
 		display: flex;
-		align-items: center;
+		flex-wrap: wrap;
         justify-content: center;
 	}
-    .linkContainer {
-        margin: 1rem;
-        padding: 1rem;
-		border-radius: 1rem;
-        background-color: #ffffff;
-    }
+	.title {
+		padding: 2.5rem;
+		color: #ff3e00;
+		line-height: 1.2;
+		margin: 2rem auto;
+		border-radius: 50%;
+		background-color: #ffffff;
+	}
 </style>
