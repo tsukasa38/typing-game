@@ -18,7 +18,6 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		overflow-y: auto;
 	}
 	.container {
 		display: flex;
