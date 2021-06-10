@@ -4,7 +4,7 @@
     let frame: number;
     let active: boolean;
     let last_time: number;
-    let elapsed_time: number = 0;
+    export let elapsed_time: number = 0;
     export let power_on: boolean = false;
 
     $: active = power_on? startStopwatch(): stopStopwatch();
