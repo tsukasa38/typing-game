@@ -9,8 +9,8 @@
 
     $: active = power_on? startStopwatch(): stopStopwatch();
 
-    function runningStopWatch(): void {
-        frame = requestAnimationFrame(runningStopWatch);
+    function runningStopwatch(): void {
+        frame = requestAnimationFrame(runningStopwatch);
         const time: number = window.performance.now();
         elapsed_time += time - last_time;
         last_time = time;
@@ -18,7 +18,7 @@
 
     function startStopwatch(): boolean {
         last_time = window.performance.now();
-        runningStopWatch();
+        runningStopwatch();
         return true;
     }
 
