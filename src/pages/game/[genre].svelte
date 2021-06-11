@@ -3,9 +3,9 @@
     import { generateWords } from "../../lib/game.svelte";
     import type { Word, Status } from "../../lib/game.svelte";
     import KeyBoard from "../../components/KeyBoard.svelte";
-    import View1 from "./_view1.svelte";
-    import View2 from "./_view2.svelte";
-    import View3 from "./_view3.svelte";
+    import Start from "./_start.svelte";
+    import Run from "./_run.svelte";
+    import Finish from "./_finish.svelte";
 
     export let genre: string;
 
@@ -29,13 +29,13 @@
 
 <main>
     {#if status === "start"}
-    <View1 bind:status={status} />
+    <Start bind:status={status} />
 
     {:else if status === "run"}
-    <View2 bind:status={status} typed_key={typed_key} assign_words={assign_words} typed_word_count={typed_word_count} typed_word_index={typed_word_index} />
+    <Run bind:status={status} typed_key={typed_key} assign_words={assign_words} typed_word_count={typed_word_count} typed_word_index={typed_word_index} />
 
     {:else if status === "finish"}
-    <View3 bind:status={status} />
+    <Finish bind:status={status} />
     {/if}
 
     <KeyBoard bind:typed_key={typed_key} />
