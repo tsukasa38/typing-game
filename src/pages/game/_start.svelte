@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-    <button class="startButton" on:click={() => status = "run"}>スタート</button>
+    <button class="startButton" on:click={() => status = "countdown"}>スタート</button>
 </div>
 
 <style>

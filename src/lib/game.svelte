@@ -6,7 +6,7 @@
         hiragana: string;
     };
 
-    export type Status = "start" | "run" | "finish";
+    export type Status = "start" | "countdown" | "run" | "finish";
 
     function generateRandomInt(max: number): number {
         return Math.floor(Math.random() * max);
