@@ -1,6 +1,9 @@
 <script lang="ts">
-    import type { Word } from "../../lib/game.svelte";
+    import { checkKey } from "../../lib/game.svelte";
+    import type { Word, Status } from "../../lib/game.svelte";
 
+    export let status: Status;
+    export let typed_key: string;
     export let assign_words: Word[];
     export let typed_word_count: number;
     export let typed_word_index: number;
@@ -9,9 +12,31 @@
     let romaji_head: string;
     let romaji_tail: string;
 
+
     $: name = assign_words[typed_word_count].name;
     $: romaji_head = assign_words[typed_word_count].romaji.slice(0, typed_word_index);
     $: romaji_tail = assign_words[typed_word_count].romaji.slice(typed_word_index);
+
+
+    $: if(checkKey(typed_key)) {
+        const target_word: Word = assign_words[typed_word_count];
+        const target_char: string = target_word.romaji[typed_word_index];
+
+        if(typed_key === target_char) {
+            typed_word_index += 1;
+
+            if(typed_word_index === target_word.romaji.length) {
+                typed_word_index = 0;
+                typed_word_count += 1;
+
+                if(typed_word_count === assign_words.length) {
+                    typed_word_count = 0;
+                    status = "finish";
+                }
+            }
+        }
+    }
+
 </script>
 
 <div class="container">
