@@ -94,11 +94,12 @@
         justify-content: center;
     }
     @media (orientation: landscape) and (max-height: 480px) {
+        /* スマホ横画面対応 */
         .keyboard {
             width: 100vw;
         }
     }
-    @media (orientation: portrait) and (max-width: 720px) {
+    @media (max-width: 720px) {
         .keyboard {
             width: 100vw;
         }
