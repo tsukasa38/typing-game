@@ -1,6 +1,6 @@
 {
   "name": "typing-game",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "scripts": {
     "dev:vite": "vite",
     "dev:routify": "routify",
