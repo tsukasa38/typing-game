@@ -35,17 +35,4 @@
 
 </script>
 
-<div class="container">
-    <h1>{(elapsed_time/1000).toFixed(2)}</h1>
-</div>
-
-<style>
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #ffffff;
-        border-radius: 50%;
-        padding: 2rem 3rem;
-    }
-</style>
+<slot></slot>
